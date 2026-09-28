@@ -34,8 +34,10 @@
                 <p:message for="deadline" />
 
                 <p:commandButton value="Cancel"
+                                 process="@this"
                                  action="#{changeArrivalDeadlineDateDialog.cancel()}" />
                 <p:commandButton value="Update"
+                                 update="@form"
                                  action="#{changeArrivalDeadlineDate.changeArrivalDeadline()}" />
             </h:panelGrid>
             <h:messages />
