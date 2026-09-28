@@ -15,20 +15,17 @@
         <h:form>
             <h:panelGrid columns="2" cellpadding="15">
                 <p:outputLabel value="Origin:" />
-                <p:outputLabel value="#{changeArrivalDeadlineDate.cargo.originName}"
-                               ariaLabel="Origin" />
+                <p:outputLabel value="#{changeArrivalDeadlineDate.cargo.originName}" />
 
                 <p:outputLabel value="Destination:" />
-                <p:outputLabel value="#{changeArrivalDeadlineDate.cargo.finalDestinationName}"
-                               ariaLabel="Destination" />
+                <p:outputLabel value="#{changeArrivalDeadlineDate.cargo.finalDestinationName}" />
 
                 <p:outputLabel for="deadline" value="Deadline:" />
                 <p:datePicker id="deadline"
                               value="#{changeArrivalDeadlineDate.arrivalDeadlineDate}"
                               required="true"
                               requiredMessage="An arrival deadline date is required."
-                              pattern="MM/dd/yyyy"
-                              ariaLabel="Arrival deadline date" />
+                              pattern="MM/dd/yyyy" />
 
                 <h:outputText />
                 <p:message for="deadline" />
