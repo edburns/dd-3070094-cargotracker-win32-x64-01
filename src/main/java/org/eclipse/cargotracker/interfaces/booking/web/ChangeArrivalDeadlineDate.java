@@ -61,6 +61,7 @@ public class ChangeArrivalDeadlineDate implements Serializable {
             arrivalDeadlineDate = new SimpleDateFormat(DATE_FORMAT)
                     .parse(cargo.getArrivalDeadlineDate());
         } catch (ParseException e) {
+            // Don't leave a stale deadline behind on a failed reload.
             arrivalDeadlineDate = null;
             throw new RuntimeException("Error parsing arrival deadline of cargo "
                     + "with tracking ID: " + trackingId, e);
