@@ -62,8 +62,6 @@ public class ChangeArrivalDeadlineDate implements Serializable {
                     .parse(cargo.getArrivalDeadlineDate());
         } catch (ParseException e) {
             arrivalDeadlineDate = null;
-            addErrorMessage("Arrival deadline of cargo with tracking ID: "
-                    + trackingId + " could not be read.");
             throw new RuntimeException("Error parsing arrival deadline of cargo "
                     + "with tracking ID: " + trackingId, e);
         }

@@ -167,7 +167,8 @@ public class ChangeArrivalDeadlineDateTest {
 
         try {
             bean.changeArrivalDeadline();
-        } catch (RuntimeException outsideOfJsfContext) {
+            fail("Expected closing the dynamic dialog to fail without a JSF context.");
+        } catch (NullPointerException outsideOfJsfContext) {
             // Closing the dynamic dialog needs a JSF context, which is absent
             // in this container-free test. Delegation happens before that.
         }
